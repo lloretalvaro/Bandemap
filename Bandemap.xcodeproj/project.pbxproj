@@ -71,6 +71,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C21ED46A2A79668600152EF0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */,
+				C2E99B002A792F9A009E2DBE /* ContentView.swift */,
+				C21ED46B2A79668800152EF0 /* Resources */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C21ED46B2A79668800152EF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2E99B022A792F9A009E2DBE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C2E99AF22A792F9A009E2DBE = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +112,7 @@
 		C2E99AFD2A792F9A009E2DBE /* Bandemap */ = {
 			isa = PBXGroup;
 			children = (
-				C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */,
-				C2E99B002A792F9A009E2DBE /* ContentView.swift */,
-				C2E99B022A792F9A009E2DBE /* Assets.xcassets */,
+				C21ED46A2A79668600152EF0 /* App */,
 				C2E99B042A792F9A009E2DBE /* Preview Content */,
 			);
 			path = Bandemap;
