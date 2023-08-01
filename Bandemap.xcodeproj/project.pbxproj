@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21ED4742A7967B600152EF0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4732A7967B600152EF0 /* RootView.swift */; };
+		C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4752A7967D100152EF0 /* RootViewModel.swift */; };
+		C21ED4782A7967E400152EF0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4772A7967E400152EF0 /* LoginView.swift */; };
 		C2E99AFF2A792F9A009E2DBE /* BandemapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */; };
-		C2E99B012A792F9A009E2DBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99B002A792F9A009E2DBE /* ContentView.swift */; };
 		C2E99B032A792F9A009E2DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B022A792F9A009E2DBE /* Assets.xcassets */; };
 		C2E99B062A792F9A009E2DBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B052A792F9A009E2DBE /* Preview Assets.xcassets */; };
 		C2E99B102A792F9B009E2DBE /* BandemapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99B0F2A792F9B009E2DBE /* BandemapTests.swift */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C21ED4732A7967B600152EF0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		C21ED4752A7967D100152EF0 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		C21ED4772A7967E400152EF0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C2E99AFB2A792F9A009E2DBE /* Bandemap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandemap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandemapApp.swift; sourceTree = "<group>"; };
-		C2E99B002A792F9A009E2DBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C2E99B022A792F9A009E2DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E99B052A792F9A009E2DBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2E99B0B2A792F9B009E2DBE /* BandemapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandemapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */,
-				C2E99B002A792F9A009E2DBE /* ContentView.swift */,
 				C21ED46B2A79668800152EF0 /* Resources */,
 			);
 			path = App;
@@ -87,6 +90,32 @@
 				C2E99B022A792F9A009E2DBE /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C21ED46D2A79676400152EF0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C21ED46F2A79677D00152EF0 /* Login */,
+				C21ED46E2A79677400152EF0 /* Root */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C21ED46E2A79677400152EF0 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				C21ED4732A7967B600152EF0 /* RootView.swift */,
+				C21ED4752A7967D100152EF0 /* RootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		C21ED46F2A79677D00152EF0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C21ED4772A7967E400152EF0 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		C2E99AF22A792F9A009E2DBE = {
@@ -112,6 +141,7 @@
 		C2E99AFD2A792F9A009E2DBE /* Bandemap */ = {
 			isa = PBXGroup;
 			children = (
+				C21ED46D2A79676400152EF0 /* Presentation */,
 				C21ED46A2A79668600152EF0 /* App */,
 				C2E99B042A792F9A009E2DBE /* Preview Content */,
 			);
@@ -273,8 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E99B012A792F9A009E2DBE /* ContentView.swift in Sources */,
 				C2E99AFF2A792F9A009E2DBE /* BandemapApp.swift in Sources */,
+				C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */,
+				C21ED4782A7967E400152EF0 /* LoginView.swift in Sources */,
+				C21ED4742A7967B600152EF0 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
