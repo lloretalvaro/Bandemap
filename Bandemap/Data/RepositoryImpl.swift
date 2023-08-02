@@ -18,7 +18,7 @@ final class RepositoryImpl: RepositoryProtocol {
     }
     
     func login(withUser user: String, andPassword password: String) {
-        print("login in RepositoryImpl")
+        print("login inside RepositoryImpl: user \(user), password \(password)")
         print("...using remoteDataSource now...")
         
         remoteDataSource.login(withUser: user, andPassword: password)

@@ -22,7 +22,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol{
     private let session: URLSession = URLSession.shared
     
     func login(withUser user: String, andPassword password: String) {
-        print("login in RemoteDataSourceImpl")
+        print("login inside RemoteDataSourceImpl: user \(user), password \(password)")
     }
     
 }

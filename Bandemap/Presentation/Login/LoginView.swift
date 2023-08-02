@@ -26,6 +26,7 @@ struct LoginView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 225)
+                .accessibilityLabel("An icon of the planet Earth")
             
             // MARK: - User and password textfields
             VStack {
@@ -41,7 +42,7 @@ struct LoginView: View {
             
             // MARK: - Login button
             Button {
-                rootViewModel.onLogin(user: "alvaro.lloret", password: "123456")
+                rootViewModel.onLogin(user: user, password: password)
             } label: {
                 Text("Login")
                     .modifier(ButtonTextModifier())
