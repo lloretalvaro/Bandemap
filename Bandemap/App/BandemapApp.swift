@@ -11,7 +11,10 @@ import SwiftUI
 struct BandemapApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            let remoteDataSource = RemoteDataSourceImpl()
+            let repository = RepositoryImpl(remoteDataSource: remoteDataSource)
+            RootView()
+                .environmentObject(RootViewModel(repository: repository))
         }
     }
 }

@@ -12,6 +12,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var user = ""
     @State private var password = ""
+    @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
         
@@ -28,7 +29,7 @@ struct LoginView: View {
             
             // MARK: - User and password textfields
             VStack {
-                TextField("User mail", text: $user)
+                TextField("Username", text: $user)
                     .modifier(CustomTextFieldModifier())
                 Spacer()
                 SecureField("Password", text: $password)
@@ -40,7 +41,7 @@ struct LoginView: View {
             
             // MARK: - Login button
             Button {
-                print("Do the login")
+                rootViewModel.onLogin(user: "alvaro.lloret", password: "123456")
             } label: {
                 Text("Login")
                     .modifier(ButtonTextModifier())
