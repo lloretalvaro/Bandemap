@@ -7,9 +7,53 @@
 
 import SwiftUI
 
+
+
 struct LoginView: View {
+    @State private var user = ""
+    @State private var password = ""
+    
     var body: some View {
-        Text("Login view")
+        
+        VStack {
+            Text("Bandemap")
+                .font(.system(.largeTitle, design: .rounded))
+                .fontWeight(.black)
+                .padding()
+            
+            Image(decorative: "EarthSimple")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 225)
+            
+            // MARK: - User, password
+            VStack {
+                TextField("User mail", text: $user)
+                    .modifier(CustomTextFieldModifier())
+                Spacer()
+                SecureField("Password", text: $password)
+                    .modifier(CustomTextFieldModifier())
+                    
+            }
+            .frame(width: 280, height: 115)
+            .padding(EdgeInsets(top: 50, leading: 0, bottom: 20, trailing: 0))
+            
+         
+            
+            // MARK: - Login button
+            Button {
+                print("Do the login")
+            } label: {
+                Text("Login")
+                    .modifier(ButtonTextdModifier())
+                    
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            LinearGradient(gradient: Gradient(colors: [.indigo, .green]), startPoint: .bottomLeading, endPoint: .topTrailing)
+        )
+        
     }
 }
 
