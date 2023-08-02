@@ -9,5 +9,5 @@ import Foundation
 
 protocol RepositoryProtocol {
     func login(withUser user: String, andPassword password: String)
-    
+    func getGeocodingInfo() async throws -> GeocodingInfo?
 }

@@ -31,17 +31,22 @@ final class RootViewModel: ObservableObject {
     // Set status to loading
         self.status = .loading
         
-        /* Estoy usando este delay de 1 segundo simplemente para
+        /* Estoy usando este delay de 0.5s simplemente para
          que el RootView enseñe la pantalla de ProgressView 1s
          y asi simular el tiempo de carga tipico, tras esto
          se ejecuta el login del repository y se cambia el status a
          loaded para mostrar la vista del mapa.
          */
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.repository.login(withUser: user, andPassword: password)
             self.status = .loaded
         }
         
+        Task {
+            let geocodingInfo = try await repository.getGeocodingInfo()
+            let flag = geocodingInfo?.results?[0].annotations?.flag
+            print("The flag is: \(flag!)")
+        }
         
     }
 }

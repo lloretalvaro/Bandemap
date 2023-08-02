@@ -25,5 +25,9 @@ final class RepositoryImpl: RepositoryProtocol {
         
     }
     
+    func getGeocodingInfo() async throws -> GeocodingInfo? {
+        return try? await remoteDataSource.getGeocodingInfo()
+    }
+    
     
 }
