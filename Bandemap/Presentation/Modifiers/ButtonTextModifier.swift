@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonTextdModifier: ViewModifier {
+struct ButtonTextModifier: ViewModifier {
     
     func body(content: Content) -> some View {
         content

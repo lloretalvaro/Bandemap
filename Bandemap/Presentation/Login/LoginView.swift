@@ -16,17 +16,17 @@ struct LoginView: View {
     var body: some View {
         
         VStack {
+            // MARK: - App name and logos
             Text("Bandemap")
                 .font(.system(.largeTitle, design: .rounded))
                 .fontWeight(.black)
                 .padding()
-            
             Image(decorative: "EarthSimple")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 225)
             
-            // MARK: - User, password
+            // MARK: - User and password textfields
             VStack {
                 TextField("User mail", text: $user)
                     .modifier(CustomTextFieldModifier())
@@ -38,14 +38,12 @@ struct LoginView: View {
             .frame(width: 280, height: 115)
             .padding(EdgeInsets(top: 50, leading: 0, bottom: 20, trailing: 0))
             
-         
-            
             // MARK: - Login button
             Button {
                 print("Do the login")
             } label: {
                 Text("Login")
-                    .modifier(ButtonTextdModifier())
+                    .modifier(ButtonTextModifier())
                     
             }
         }
