@@ -33,7 +33,7 @@ struct ListCellView: View {
             
             
         })
-        .padding(9)
+        .padding(12)
         .background(.cyan)
         .cornerRadius(9)
     }

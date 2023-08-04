@@ -32,7 +32,7 @@ struct RootView: View {
                         Text("Mapa")
                     }
                 
-                ListView()
+                ListView(listViewModel: ListViewModel(repository: rootViewModel.repository))
                     .tabItem{
                         Image(systemName: "list.dash")
                         Text("Listado")

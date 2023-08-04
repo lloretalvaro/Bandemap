@@ -11,7 +11,7 @@ final class LocalDataSourceImpl: LocalDataSourceProtocol {
     
     
     func getCountries() async throws -> [Country]? {
-        return []
+        return [Country(country: "Italy", capital: "Rome", flag: "🇮🇹")]
     }
     
     

@@ -8,13 +8,37 @@
 import SwiftUI
 
 struct ListView: View {
+    
+    @EnvironmentObject var rootViewModel: RootViewModel
+    @ObservedObject var listViewModel: ListViewModel
+    
+    init(listViewModel: ListViewModel) {
+        self.listViewModel = listViewModel
+    }
+    
     var body: some View {
-        Text("List view")
+        
+        NavigationStack {
+            Text("Pick one to geolocate 📍")
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+                .font(.title)
+            
+            List {
+                ForEach(listViewModel.countries) { country in
+                    ListCellView(country: country)
+                        .frame(maxWidth: .infinity)
+                }
+            }
+            .scrollContentBackground(.hidden) // Esconder el background
+//            .navigationTitle("Pick one to geolocate it") // Título de la lista
+//            .navigationBarTitleDisplayMode(.inline) // Meter en el centro el título pequeño
+        }
+        
     }
 }
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        ListView(listViewModel: ListViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl(), localDataSource: LocalDataSourceImpl())))
     }
 }
