@@ -12,7 +12,8 @@ struct BandemapApp: App {
     var body: some Scene {
         WindowGroup {
             let remoteDataSource = RemoteDataSourceImpl()
-            let repository = RepositoryImpl(remoteDataSource: remoteDataSource)
+            let localDataSource = LocalDataSourceImpl()
+            let repository = RepositoryImpl(remoteDataSource: remoteDataSource, localDataSource: localDataSource)
             RootView()
                 .environmentObject(RootViewModel(repository: repository))
         }

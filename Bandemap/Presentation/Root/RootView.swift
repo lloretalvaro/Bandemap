@@ -25,7 +25,21 @@ struct RootView: View {
             Text("Error \(errorString)")
             
         case Status.loaded:
-            MapView()
+            TabView{
+                MapView()
+                    .tabItem{
+                        Image(systemName: "map")
+                        Text("Mapa")
+                    }
+                
+                ListView()
+                    .tabItem{
+                        Image(systemName: "list.dash")
+                        Text("Listado")
+                    }
+            }
+            
+            
         }
         
     }

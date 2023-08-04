@@ -18,6 +18,12 @@
 		C2861FC92A7A52AB00D390C5 /* RepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FC82A7A52AB00D390C5 /* RepositoryImpl.swift */; };
 		C2861FCC2A7A575A00D390C5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FCB2A7A575A00D390C5 /* MapView.swift */; };
 		C2861FD02A7AA8BF00D390C5 /* GeocodingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FCF2A7AA8BF00D390C5 /* GeocodingInfo.swift */; };
+		C29A08942A7BF8B2007E2646 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08932A7BF8B2007E2646 /* ListView.swift */; };
+		C29A08982A7C04DB007E2646 /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08972A7C04DB007E2646 /* ListCellView.swift */; };
+		C29A089C2A7C07E0007E2646 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A089B2A7C07E0007E2646 /* Country.swift */; };
+		C29A089E2A7C0B1A007E2646 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A089D2A7C0B1A007E2646 /* ListViewModel.swift */; };
+		C29A08A12A7C0D16007E2646 /* LocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A02A7C0D16007E2646 /* LocalDataSourceImpl.swift */; };
+		C29A08A32A7C0D53007E2646 /* LocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A22A7C0D53007E2646 /* LocalDataSourceProtocol.swift */; };
 		C2E99AFF2A792F9A009E2DBE /* BandemapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */; };
 		C2E99B032A792F9A009E2DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B022A792F9A009E2DBE /* Assets.xcassets */; };
 		C2E99B062A792F9A009E2DBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B052A792F9A009E2DBE /* Preview Assets.xcassets */; };
@@ -55,6 +61,12 @@
 		C2861FC82A7A52AB00D390C5 /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
 		C2861FCB2A7A575A00D390C5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C2861FCF2A7AA8BF00D390C5 /* GeocodingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingInfo.swift; sourceTree = "<group>"; };
+		C29A08932A7BF8B2007E2646 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		C29A08972A7C04DB007E2646 /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		C29A089B2A7C07E0007E2646 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		C29A089D2A7C0B1A007E2646 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		C29A08A02A7C0D16007E2646 /* LocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceImpl.swift; sourceTree = "<group>"; };
+		C29A08A22A7C0D53007E2646 /* LocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceProtocol.swift; sourceTree = "<group>"; };
 		C2E99AFB2A792F9A009E2DBE /* Bandemap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandemap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandemapApp.swift; sourceTree = "<group>"; };
 		C2E99B022A792F9A009E2DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +123,7 @@
 		C21ED46D2A79676400152EF0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C29A08922A7BF871007E2646 /* List */,
 				C2861FCA2A7A574600D390C5 /* Map */,
 				C2861FB62A7A3EE700D390C5 /* Modifiers */,
 				C21ED46F2A79677D00152EF0 /* Login */,
@@ -158,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				C2861FCF2A7AA8BF00D390C5 /* GeocodingInfo.swift */,
+				C29A089B2A7C07E0007E2646 /* Country.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +181,7 @@
 			children = (
 				C2861FC12A7A508500D390C5 /* RemoteDataSourceProtocol.swift */,
 				C2861FBF2A7A506400D390C5 /* RepositoryProtocol.swift */,
+				C29A08A22A7C0D53007E2646 /* LocalDataSourceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -174,6 +189,7 @@
 		C2861FC42A7A517500D390C5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C29A089F2A7C0CF7007E2646 /* Local */,
 				C2861FC52A7A517900D390C5 /* Remote */,
 				C2861FC82A7A52AB00D390C5 /* RepositoryImpl.swift */,
 			);
@@ -194,6 +210,32 @@
 				C2861FCB2A7A575A00D390C5 /* MapView.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		C29A08922A7BF871007E2646 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C29A08952A7C04B1007E2646 /* ListCell */,
+				C29A08932A7BF8B2007E2646 /* ListView.swift */,
+				C29A089D2A7C0B1A007E2646 /* ListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C29A08952A7C04B1007E2646 /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				C29A08972A7C04DB007E2646 /* ListCellView.swift */,
+			);
+			path = ListCell;
+			sourceTree = "<group>";
+		};
+		C29A089F2A7C0CF7007E2646 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				C29A08A02A7C0D16007E2646 /* LocalDataSourceImpl.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		C2E99AF22A792F9A009E2DBE = {
@@ -384,16 +426,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E99AFF2A792F9A009E2DBE /* BandemapApp.swift in Sources */,
+				C29A08942A7BF8B2007E2646 /* ListView.swift in Sources */,
 				C2861FD02A7AA8BF00D390C5 /* GeocodingInfo.swift in Sources */,
+				C29A08A12A7C0D16007E2646 /* LocalDataSourceImpl.swift in Sources */,
 				C2861FBB2A7A400000D390C5 /* ButtonTextModifier.swift in Sources */,
 				C2861FC22A7A508500D390C5 /* RemoteDataSourceProtocol.swift in Sources */,
 				C2861FCC2A7A575A00D390C5 /* MapView.swift in Sources */,
+				C29A089E2A7C0B1A007E2646 /* ListViewModel.swift in Sources */,
 				C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */,
 				C21ED4782A7967E400152EF0 /* LoginView.swift in Sources */,
+				C29A08982A7C04DB007E2646 /* ListCellView.swift in Sources */,
 				C2861FB82A7A3F4D00D390C5 /* CustomTextFieldModifier.swift in Sources */,
 				C21ED4742A7967B600152EF0 /* RootView.swift in Sources */,
 				C2861FC02A7A506400D390C5 /* RepositoryProtocol.swift in Sources */,
 				C2861FC72A7A518D00D390C5 /* RemoteDataSourceImpl.swift in Sources */,
+				C29A089C2A7C07E0007E2646 /* Country.swift in Sources */,
+				C29A08A32A7C0D53007E2646 /* LocalDataSourceProtocol.swift in Sources */,
 				C2861FC92A7A52AB00D390C5 /* RepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

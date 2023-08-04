@@ -41,7 +41,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     
     func requestGeocodingInfo() async throws -> (Data, URLResponse) {
         //TODO: Make sure to test error cases
-        let url = URL(string: "https://api.opencagedata.com/geocode/v1/json?q=Malaga,Spain&key=\(apiKey)")!
+        let url = URL(string: "https://api.opencagedata.com/geocode/v1/json?q=Paris,Francia&key=\(apiKey)")!
         let (data, urlResponse) = try await URLSession.shared.data(from: url)
         return (data, urlResponse)
     }

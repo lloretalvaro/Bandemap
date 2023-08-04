@@ -9,12 +9,12 @@ import Foundation
 
 final class RepositoryImpl: RepositoryProtocol {
     
-
     private let remoteDataSource: RemoteDataSourceProtocol
-    
+    private let localDataSource: LocalDataSourceProtocol
 
-    init(remoteDataSource: RemoteDataSourceProtocol) {
+    init(remoteDataSource: RemoteDataSourceProtocol, localDataSource: LocalDataSourceProtocol) {
         self.remoteDataSource = remoteDataSource
+        self.localDataSource = localDataSource
     }
     
     func login(withUser user: String, andPassword password: String) {
@@ -27,6 +27,10 @@ final class RepositoryImpl: RepositoryProtocol {
     
     func getGeocodingInfo() async throws -> GeocodingInfo? {
         return try? await remoteDataSource.getGeocodingInfo()
+    }
+    
+    func getCountries() async throws -> [Country]? {
+        return try? await localDataSource.getCountries()
     }
     
     
