@@ -53,6 +53,10 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
             locationDescriptionCleaned = capital
         }
         
+        print(capital)
+        print(country)
+        print(locationDescription)
+        
         let url = URL(string: "https://api.opencagedata.com/geocode/v1/json?q=\(locationDescriptionCleaned)&key=\(apiKey)")!
         let (data, urlResponse) = try await URLSession.shared.data(from: url)
         return (data, urlResponse)
