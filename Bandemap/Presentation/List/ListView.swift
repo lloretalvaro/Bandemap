@@ -27,6 +27,8 @@ struct ListView: View {
                 ForEach(listViewModel.countries) { country in
                     ListCellView(country: country)
                         .frame(maxWidth: .infinity)
+                        .listRowSeparator(.hidden)
+                    
                 }
             }
             .scrollContentBackground(.hidden) // Esconder el background
