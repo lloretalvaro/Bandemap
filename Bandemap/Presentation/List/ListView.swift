@@ -25,9 +25,15 @@ struct ListView: View {
             
             List {
                 ForEach(listViewModel.countries) { country in
-                    ListCellView(country: country)
-                        .frame(maxWidth: .infinity)
-                        .listRowSeparator(.hidden)
+                    NavigationLink(destination: DetailsView(country: country)) {
+                        
+                        ListCellView(country: country)
+                            .frame(maxWidth: .infinity)
+                            
+                        
+                    }.listRowSeparator(.hidden)
+                    
+                    
                     
                 }
             }
