@@ -42,11 +42,5 @@ final class RootViewModel: ObservableObject {
             self.status = .loaded
         }
         
-        Task {
-            let geocodingInfo = try await repository.getGeocodingInfo()
-            let flag = geocodingInfo?.results?[0].annotations?.flag
-            print("The flag is: \(flag!)")
-        }
-        
     }
 }

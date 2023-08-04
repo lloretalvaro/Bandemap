@@ -25,7 +25,7 @@ struct ListView: View {
             
             List {
                 ForEach(listViewModel.countries) { country in
-                    NavigationLink(destination: DetailsView(country: country)) {
+                    NavigationLink(destination: DetailsView(country: country, detailsViewModel: DetailsViewModel(country: country, repository: rootViewModel.repository))) {
                         
                         ListCellView(country: country)
                             .frame(maxWidth: .infinity)

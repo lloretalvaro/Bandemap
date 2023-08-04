@@ -13,7 +13,7 @@ enum NetworkError: Error, Equatable {
     case noData
     case noUser
     case errorCode(Int?)
-    case tokenFormat
+    case badFormat
     case decoding
     case other
 }
@@ -29,19 +29,31 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     }
     
     
-    func getGeocodingInfo() async throws -> GeocodingInfo? {
+    func getGeocodingInfo(locationDescription: String) async throws -> GeocodingInfo? {
         //TODO: Make sure to test error cases
         
-        let (data, _) = try await self.requestGeocodingInfo()
+        let (data, _) = try await self.requestGeocodingInfo(locationDescription: locationDescription)
         let geocodingInfo = try! JSONDecoder().decode(GeocodingInfo.self, from: data)
         
         return geocodingInfo
     }
     
     
-    func requestGeocodingInfo() async throws -> (Data, URLResponse) {
+    func requestGeocodingInfo(locationDescription: String) async throws -> (Data, URLResponse) {
         //TODO: Make sure to test error cases
-        let url = URL(string: "https://api.opencagedata.com/geocode/v1/json?q=Paris,Francia&key=\(apiKey)")!
+        let components = locationDescription.components(separatedBy: ",")
+        let capital = components[0]
+        let country = components[1]
+        
+        var locationDescriptionCleaned = locationDescription
+        
+        if capital.contains(" ") {
+            locationDescriptionCleaned = country
+        }else if country.contains(" "){
+            locationDescriptionCleaned = capital
+        }
+        
+        let url = URL(string: "https://api.opencagedata.com/geocode/v1/json?q=\(locationDescriptionCleaned)&key=\(apiKey)")!
         let (data, urlResponse) = try await URLSession.shared.data(from: url)
         return (data, urlResponse)
     }

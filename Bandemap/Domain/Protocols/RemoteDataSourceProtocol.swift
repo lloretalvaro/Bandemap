@@ -9,5 +9,5 @@ import Foundation
 
 protocol RemoteDataSourceProtocol {
     func login(withUser user: String, andPassword password: String)
-    func getGeocodingInfo() async throws -> GeocodingInfo?
+    func getGeocodingInfo(locationDescription: String) async throws -> GeocodingInfo?
 }

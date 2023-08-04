@@ -9,19 +9,25 @@ import SwiftUI
 
 struct DetailsView: View {
     
-    var country: Country
+    let country: Country
+    @ObservedObject var detailsViewModel: DetailsViewModel
     
-    init(country: Country) {
+    
+    init(country: Country, detailsViewModel: DetailsViewModel) {
         self.country = country
+        self.detailsViewModel = detailsViewModel
     }
     
     var body: some View {
-        Text("Country: \(country.country) \(country.capital) \(country.flag) ")
+        VStack{
+            Text("Country: \(country.country) \(country.capital) \(country.flag) ")
+            Text(detailsViewModel.geocodingInfo?.results?[0].formatted ?? "Error while requesting geocoding info")
+        }
     }
 }
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(country: Country(country: "Spain", capital: "Madrid", flag: "🇪🇸"))
+        DetailsView(country: Country(country: "Spain", capital: "Madrid", flag: "🇪🇸"), detailsViewModel: DetailsViewModel(country:Country(country: "Spain", capital: "Madrid", flag: "🇪🇸"), repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl(), localDataSource: LocalDataSourceImpl())))
     }
 }

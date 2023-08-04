@@ -9,6 +9,6 @@ import Foundation
 
 protocol RepositoryProtocol {
     func login(withUser user: String, andPassword password: String)
-    func getGeocodingInfo() async throws -> GeocodingInfo?
+    func getGeocodingInfo(locationDescription: String) async throws -> GeocodingInfo?
     func getCountries() async throws -> [Country]?
 }

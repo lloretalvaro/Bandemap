@@ -25,6 +25,7 @@
 		C29A08A12A7C0D16007E2646 /* LocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A02A7C0D16007E2646 /* LocalDataSourceImpl.swift */; };
 		C29A08A32A7C0D53007E2646 /* LocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A22A7C0D53007E2646 /* LocalDataSourceProtocol.swift */; };
 		C29A08A72A7CFF98007E2646 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A62A7CFF98007E2646 /* DetailsView.swift */; };
+		C29A08A92A7D0D38007E2646 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A82A7D0D38007E2646 /* DetailsViewModel.swift */; };
 		C2E99AFF2A792F9A009E2DBE /* BandemapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */; };
 		C2E99B032A792F9A009E2DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B022A792F9A009E2DBE /* Assets.xcassets */; };
 		C2E99B062A792F9A009E2DBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B052A792F9A009E2DBE /* Preview Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		C29A08A02A7C0D16007E2646 /* LocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		C29A08A22A7C0D53007E2646 /* LocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceProtocol.swift; sourceTree = "<group>"; };
 		C29A08A62A7CFF98007E2646 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		C29A08A82A7D0D38007E2646 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		C2E99AFB2A792F9A009E2DBE /* Bandemap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandemap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandemapApp.swift; sourceTree = "<group>"; };
 		C2E99B022A792F9A009E2DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				C29A08A62A7CFF98007E2646 /* DetailsView.swift */,
+				C29A08A82A7D0D38007E2646 /* DetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				C29A08A12A7C0D16007E2646 /* LocalDataSourceImpl.swift in Sources */,
 				C2861FBB2A7A400000D390C5 /* ButtonTextModifier.swift in Sources */,
 				C2861FC22A7A508500D390C5 /* RemoteDataSourceProtocol.swift in Sources */,
+				C29A08A92A7D0D38007E2646 /* DetailsViewModel.swift in Sources */,
 				C2861FCC2A7A575A00D390C5 /* MapView.swift in Sources */,
 				C29A089E2A7C0B1A007E2646 /* ListViewModel.swift in Sources */,
 				C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */,
