@@ -30,10 +30,10 @@ struct LoginView: View {
             
             // MARK: - User and password textfields
             VStack {
-                TextField("Username", text: $user)
+                TextField("", text: $user, prompt: Text("Username").foregroundColor(.gray))
                     .modifier(CustomTextFieldModifier())
                 Spacer()
-                SecureField("Password", text: $password)
+                SecureField("", text: $password,  prompt: Text("Password").foregroundColor(.gray))
                     .modifier(CustomTextFieldModifier())
                     
             }

@@ -36,6 +36,7 @@ struct ListView: View {
                 LinearGradient(gradient: Gradient(colors: [.indigo, .green]), startPoint: .bottomLeading, endPoint: .topTrailing)
             )
             .navigationTitle("Pick 1 to geolocate 📍")
+            
             //            .navigationBarTitleDisplayMode(.inline)
         }
         .toolbarBackground(.visible, for: .tabBar)

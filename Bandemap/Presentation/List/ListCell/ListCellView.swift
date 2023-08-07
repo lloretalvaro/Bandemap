@@ -35,13 +35,15 @@ struct ListCellView: View {
         })
         .padding(12)
         .frame(width: 300)
-        .background(.yellow)
+        .background(
+            LinearGradient(gradient: Gradient(colors: [.yellow, .orange]), startPoint: .bottomLeading, endPoint: .topTrailing)
+        )
         .cornerRadius(9)
     }
 }
 
 struct ListCellView_Previews: PreviewProvider {
     static var previews: some View {
-        ListCellView(country: Country(country: "Spain", capital: "Madrid", flag: "🇪🇸"))
+        ListCellView(country: Country(country: "Spain", capital: "Madrid", flag: "🇪🇸", coordinates: Coordinates(latitude: 40.4167047, longitude: -3.7035825)))
     }
 }

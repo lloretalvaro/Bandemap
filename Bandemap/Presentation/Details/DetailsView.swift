@@ -44,6 +44,7 @@ struct DetailsView: View {
             }
             .padding()
             .background(.white)
+            .foregroundColor(.black)
             .cornerRadius(16)
             
             
@@ -59,6 +60,6 @@ struct DetailsView: View {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(country: Country(country: "Spain", capital: "Madrid", flag: "🇪🇸"), detailsViewModel: DetailsViewModel(country:Country(country: "Spain", capital: "Madrid", flag: "🇪🇸"), repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl(), localDataSource: LocalDataSourceImpl())))
+        DetailsView(country: Country(country: "Spain", capital: "Madrid", flag: "🇪🇸", coordinates: Coordinates(latitude: 40.4167047, longitude: -3.7035825)), detailsViewModel: DetailsViewModel(country:Country(country: "Spain", capital: "Madrid", flag: "🇪🇸", coordinates: Coordinates(latitude: 40.4167047, longitude: -3.7035825)), repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl(), localDataSource: LocalDataSourceImpl())))
     }
 }

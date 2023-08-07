@@ -12,6 +12,6 @@ struct Country: Codable, Identifiable {
     let country: String
     let capital: String
     let flag: String
+    let coordinates: Coordinates
 }
-
 
