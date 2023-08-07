@@ -42,6 +42,7 @@ struct ListView: View {
             .navigationTitle("Pick 1 to geolocate 📍") // Título de la lista
             //            .navigationBarTitleDisplayMode(.inline) // Meter en el centro el título pequeño
         }
+        .toolbarBackground(.visible, for: .tabBar)
         
         
     }

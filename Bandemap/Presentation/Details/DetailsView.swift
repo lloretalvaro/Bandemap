@@ -53,6 +53,7 @@ struct DetailsView: View {
         .background(
             LinearGradient(gradient: Gradient(colors: [.indigo, .green]), startPoint: .bottomLeading, endPoint: .topTrailing)
         )
+        .toolbarBackground(.visible, for: .tabBar)
     }
 }
 
