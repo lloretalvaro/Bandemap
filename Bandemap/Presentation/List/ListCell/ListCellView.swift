@@ -24,9 +24,9 @@ struct ListCellView: View {
                 VStack (alignment: .center, content: {
                     Text(country.country)
                         .fontWeight(.semibold)
-                        .font(.system(size:30))
+                        .font(.title)
                     Text(country.capital)
-                        .font(.system(size: 15))
+                        .font(.title3)
                 })
                 
             })
@@ -34,7 +34,8 @@ struct ListCellView: View {
             
         })
         .padding(12)
-        .background(.cyan)
+        .frame(width: 300)
+        .background(.yellow)
         .cornerRadius(9)
     }
 }

@@ -20,9 +20,39 @@ struct DetailsView: View {
     
     var body: some View {
         VStack{
-            Text("Country: \(country.country) \(country.capital) \(country.flag) ")
-            Text(detailsViewModel.geocodingInfo?.results?[0].formatted ?? "Error while requesting geocoding info")
+            VStack{
+                Text("\(country.flag)")
+                    .font(.system(size: 100))
+                Text(detailsViewModel.geocodingInfo?.results?[0].formatted ?? "Error while requesting geocoding info")
+                    .font(.title)
+            }
+            .padding(50)
+            .background(.black)
+            .foregroundColor(.white)
+            .cornerRadius(16)
+            
+            
+            
+            HStack{
+                Text("📍 Located in →")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                VStack(alignment: .leading){
+                    Text("Latitude: \(detailsViewModel.geocodingInfo?.results?[0].geometry?.lat ?? 0.0) ")
+                    Text("Longitude: \(detailsViewModel.geocodingInfo?.results?[0].geometry?.lng ?? 0.0)")
+                }
+            }
+            .padding()
+            .background(.white)
+            .cornerRadius(16)
+            
+            
+            
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+            LinearGradient(gradient: Gradient(colors: [.indigo, .green]), startPoint: .bottomLeading, endPoint: .topTrailing)
+        )
     }
 }
 

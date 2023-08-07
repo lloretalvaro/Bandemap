@@ -41,10 +41,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     
     func requestGeocodingInfo(locationDescription: String) async throws -> (Data, URLResponse) {
         //TODO: Make sure to test error cases
-        let components = locationDescription.components(separatedBy: ",")
-        let capital = components[0]
-        let country = components[1]
-        
+       
         var locationDescriptionCleaned = locationDescription.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         print("---------")
         print(locationDescription)
