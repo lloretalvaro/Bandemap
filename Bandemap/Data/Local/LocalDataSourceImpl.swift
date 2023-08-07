@@ -43,7 +43,7 @@ final class LocalDataSourceImpl: LocalDataSourceProtocol {
         Country(country: "Portugal", capital: "Lisbon", flag: "🇵🇹"),
         Country(country: "Spain", capital: "Madrid", flag: "🇪🇸"),
         Country(country: "Romania", capital: "Bucharest", flag: "🇷🇴"),
-//        Country(country: "San Marino", capital: "San Marino", flag: "🇸🇲"),
+        Country(country: "San Marino", capital: "San Marino", flag: "🇸🇲"),
         Country(country: "Serbia", capital: "Belgrade", flag: "🇷🇸"),
         Country(country: "Slovakia", capital: "Bratislava", flag: "🇸🇰"),
         Country(country: "Slovenia", capital: "Ljubljana", flag: "🇸🇮"),

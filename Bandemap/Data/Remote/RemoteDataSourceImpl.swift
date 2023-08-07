@@ -45,19 +45,14 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
         let capital = components[0]
         let country = components[1]
         
-        var locationDescriptionCleaned = locationDescription
-        
-        if capital.contains(" ") {
-            locationDescriptionCleaned = country
-        }else if country.contains(" "){
-            locationDescriptionCleaned = capital
-        }
-        
-        print(capital)
-        print(country)
+        var locationDescriptionCleaned = locationDescription.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        print("---------")
         print(locationDescription)
+        print(locationDescriptionCleaned!)
+        print("---------")
         
-        let url = URL(string: "https://api.opencagedata.com/geocode/v1/json?q=\(locationDescriptionCleaned)&key=\(apiKey)")!
+        
+        let url = URL(string: "https://api.opencagedata.com/geocode/v1/json?q=\(locationDescriptionCleaned!)&language=en&key=\(apiKey)")!
         let (data, urlResponse) = try await URLSession.shared.data(from: url)
         return (data, urlResponse)
     }
