@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MapViewModel {
+final class MapViewModel: ObservableObject {
     private let repository: RepositoryProtocol
     @Published var countries: [Country] = []
     

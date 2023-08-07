@@ -9,30 +9,36 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    @EnvironmentObject var rootViewModel: RootViewModel
+    @ObservedObject var mapViewModel: MapViewModel
     
+    init(mapViewModel: MapViewModel) {
+        self.mapViewModel = mapViewModel
+    }
+    
+    // Initial region that the map will be showing at first,
+    // after that the user will move the map as he wants.
     @State var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
-        span: MKCoordinateSpan(latitudeDelta: 40, longitudeDelta: 40))
+        center: CLLocationCoordinate2D(latitude: 41.3828939, longitude: 2.1774322),
+        span: MKCoordinateSpan(latitudeDelta: 30, longitudeDelta: 30))
     
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: [
-            Country(country: "Portugal", capital: "Lisbon", flag: "🇵🇹", coordinates: Coordinates(latitude: 38.7077507, longitude: -9.1365919)),
-            Country(country: "Spain", capital: "Madrid", flag: "🇪🇸", coordinates: Coordinates(latitude: 40.4167047, longitude: -3.7035825)),
-            Country(country: "Romania", capital: "Bucharest", flag: "🇷🇴", coordinates: Coordinates(latitude: 44.4361414, longitude: 26.1027202)),
-            Country(country: "United Kingdom", capital: "London", flag: "🇬🇧", coordinates: Coordinates(latitude: 51.5073359, longitude: -0.12765)),
-        ]) {
+        Map(coordinateRegion: $region, annotationItems: mapViewModel.countries) {
             location in
             MapAnnotation(
                 coordinate: CLLocationCoordinate2D(latitude: location.coordinates.latitude, longitude: location.coordinates.longitude)){
-                    Text(location.flag).font(.largeTitle)
-            }
+                    
+                    Text(location.flag).font(.largeTitle).onTapGesture {
+                        print("\(location.country) has been tapped")
+                    }
+                }
         }
-            .navigationTitle("Locations")
+        .navigationTitle("Locations")
     }
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(mapViewModel: MapViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl(), localDataSource: LocalDataSourceImpl())))
     }
 }

@@ -26,7 +26,7 @@ struct RootView: View {
             
         case Status.loaded:
             TabView{
-                MapView()
+                MapView(mapViewModel: MapViewModel(repository: rootViewModel.repository))
                     .tabItem{
                         Image(systemName: "map")
                         Text("Mapa")
