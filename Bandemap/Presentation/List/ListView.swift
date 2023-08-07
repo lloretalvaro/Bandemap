@@ -17,10 +17,8 @@ struct ListView: View {
     }
     
     var body: some View {
-        
         NavigationStack {
            
-            
             List {
                 ForEach(listViewModel.countries) { country in
                     NavigationLink(destination: DetailsView(country: country, detailsViewModel: DetailsViewModel(country: country, repository: rootViewModel.repository))) {
@@ -28,19 +26,17 @@ struct ListView: View {
                         ListCellView(country: country)
                             .frame(maxWidth: .infinity)
                         
-                        
                     }
                     .listRowSeparator(.hidden)
-                    
-                    
+
                 }
             }
             .scrollContentBackground(.hidden) // Esconder el background
             .background(
                 LinearGradient(gradient: Gradient(colors: [.indigo, .green]), startPoint: .bottomLeading, endPoint: .topTrailing)
             )
-            .navigationTitle("Pick 1 to geolocate 📍") // Título de la lista
-            //            .navigationBarTitleDisplayMode(.inline) // Meter en el centro el título pequeño
+            .navigationTitle("Pick 1 to geolocate 📍")
+            //            .navigationBarTitleDisplayMode(.inline)
         }
         .toolbarBackground(.visible, for: .tabBar)
         
