@@ -23,30 +23,41 @@ struct DetailsView: View {
             VStack{
                 Text("\(country.flag)")
                     .font(.system(size: 100))
-                Text(detailsViewModel.geocodingInfo?.results?[0].formatted ?? "Error while requesting geocoding info")
-                    .font(.title)
+                
+                if detailsViewModel.geocodingInfo?.results?[0].formatted == nil  {
+                    ProgressView()
+                        .tint(.red)
+                }else {
+                    Text(detailsViewModel.geocodingInfo?.results?[0].formatted ?? "Error requesting formatted location")
+                        .font(.title)
+                        .multilineTextAlignment(.center)
+                    Text(detailsViewModel.geocodingInfo?.results?[0].components?.continent ?? "Error requesting continent")
+                        .font(.title3)
+                }
+                
+                
+                
             }
-            .padding(50)
+            .padding(40)
             .background(.black)
             .foregroundColor(.white)
             .cornerRadius(16)
             
+            DetailsCellView(detailsTitle: "📍 Located in", displayedText: "(\(detailsViewModel.geocodingInfo?.results?[0].geometry?.lat ?? 0.0), \(detailsViewModel.geocodingInfo?.results?[0].geometry?.lng ?? 0.0))",
+                            
+                            failCondition: detailsViewModel.geocodingInfo?.results?[0].geometry?.lat == nil || detailsViewModel.geocodingInfo?.results?[0].geometry?.lng == nil)
             
+            DetailsCellView(detailsTitle: "💰 Currency the", displayedText: "\(detailsViewModel.geocodingInfo?.results?[0].annotations?.currency?.name ?? "Error requesting currency name") with symbol \(detailsViewModel.geocodingInfo?.results?[0].annotations?.currency?.symbol ?? "Error requesting currency symbol")",
+                            failCondition: detailsViewModel.geocodingInfo?.results?[0].geometry?.lat == nil || detailsViewModel.geocodingInfo?.results?[0].geometry?.lng == nil)
             
-            HStack{
-                Text("📍 Located in →")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                VStack(alignment: .leading){
-                    Text("Latitude: \(detailsViewModel.geocodingInfo?.results?[0].geometry?.lat ?? 0.0) ")
-                    Text("Longitude: \(detailsViewModel.geocodingInfo?.results?[0].geometry?.lng ?? 0.0)")
-                }
-            }
-            .padding()
-            .background(.white)
-            .foregroundColor(.black)
-            .cornerRadius(16)
+            DetailsCellView(detailsTitle: "🚅 They measure speed with", displayedText: "\(detailsViewModel.geocodingInfo?.results?[0].annotations?.roadinfo?.speedIn ?? "Error requesting units")",
+                            failCondition: detailsViewModel.geocodingInfo?.results?[0].annotations?.roadinfo?.speedIn == nil)
             
+            DetailsCellView(detailsTitle: "🚘 They drive on the", displayedText: "\(detailsViewModel.geocodingInfo?.results?[0].annotations?.roadinfo?.driveOn ?? "Error requesting where they drive")",
+                            failCondition: detailsViewModel.geocodingInfo?.results?[0].annotations?.roadinfo?.driveOn == nil)
+            
+            DetailsCellView(detailsTitle: "📞 The calling code is", displayedText: "\(detailsViewModel.geocodingInfo?.results?[0].annotations?.callingcode ?? 0)",
+                            failCondition: detailsViewModel.geocodingInfo?.results?[0].annotations?.callingcode == nil)
             
             
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21A9F7A2A81423C00D895D6 /* DetailsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A9F792A81423C00D895D6 /* DetailsCellView.swift */; };
 		C21ED4742A7967B600152EF0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4732A7967B600152EF0 /* RootView.swift */; };
 		C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4752A7967D100152EF0 /* RootViewModel.swift */; };
 		C21ED4782A7967E400152EF0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4772A7967E400152EF0 /* LoginView.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C21A9F792A81423C00D895D6 /* DetailsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCellView.swift; sourceTree = "<group>"; };
 		C21ED4732A7967B600152EF0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C21ED4752A7967D100152EF0 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		C21ED4772A7967E400152EF0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C21A9F782A81421800D895D6 /* DetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C21A9F792A81423C00D895D6 /* DetailsCellView.swift */,
+			);
+			path = DetailsCell;
+			sourceTree = "<group>";
+		};
 		C21ED46A2A79668600152EF0 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		C29A08A42A7CFF6E007E2646 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				C21A9F782A81421800D895D6 /* DetailsCell */,
 				C29A08A62A7CFF98007E2646 /* DetailsView.swift */,
 				C29A08A82A7D0D38007E2646 /* DetailsViewModel.swift */,
 			);
@@ -445,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C21A9F7A2A81423C00D895D6 /* DetailsCellView.swift in Sources */,
 				C2E99AFF2A792F9A009E2DBE /* BandemapApp.swift in Sources */,
 				C29A08A72A7CFF98007E2646 /* DetailsView.swift in Sources */,
 				C29A08942A7BF8B2007E2646 /* ListView.swift in Sources */,

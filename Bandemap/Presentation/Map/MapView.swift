@@ -23,17 +23,26 @@ struct MapView: View {
         span: MKCoordinateSpan(latitudeDelta: 30, longitudeDelta: 30))
     
     var body: some View {
-        Map(coordinateRegion: $region, annotationItems: mapViewModel.countries) {
-            location in
-            MapAnnotation(
-                coordinate: CLLocationCoordinate2D(latitude: location.coordinates.latitude, longitude: location.coordinates.longitude)){
-                    
-                    Text(location.flag).font(.largeTitle).onTapGesture {
-                        print("\(location.country) has been tapped")
+        NavigationStack{
+            
+            Map(coordinateRegion: $region, annotationItems: mapViewModel.countries) {
+                location in
+                MapAnnotation(
+                    coordinate: CLLocationCoordinate2D(latitude: location.coordinates.latitude, longitude: location.coordinates.longitude)){
+                        
+                        
+                        NavigationLink {
+                            DetailsView(country: location, detailsViewModel: DetailsViewModel(country: location, repository: rootViewModel.repository))
+                        } label: {
+                            Text(location.flag).font(.largeTitle)
+                        }
+                        
+                        
                     }
-                }
+            }
+            
         }
-        .navigationTitle("Locations")
+        
     }
 }
 
