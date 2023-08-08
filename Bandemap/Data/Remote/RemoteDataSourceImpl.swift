@@ -36,17 +36,18 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     
     
     func getGeocodingInfo(locationDescription: String) async throws -> GeocodingInfo? {
-        //TODO: Make sure to test error cases
         
         let (data, _) = try await self.requestGeocodingInfo(locationDescription: locationDescription)
-        let geocodingInfo = try! JSONDecoder().decode(GeocodingInfo.self, from: data)
-        
-        return geocodingInfo
+        do {
+            let geocodingInfo = try JSONDecoder().decode(GeocodingInfo.self, from: data)
+            return geocodingInfo
+        }catch{
+            throw NetworkError.badFormat
+        }
     }
     
     
     func requestGeocodingInfo(locationDescription: String) async throws -> (Data, URLResponse) {
-        //TODO: Make sure to test error cases
     
         let locationDescriptionCleaned = locationDescription.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         print("---------")
@@ -54,10 +55,14 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
         print(locationDescriptionCleaned!)
         print("---------")
         
+        do{
+            let url = URL(string: "\(server)/geocode/v1/json?q=\(locationDescriptionCleaned!)&language=en&key=\(apiKey)")!
+            let (data, urlResponse) = try await session.data(url: URLRequest(url: url))
+            return (data, urlResponse)
+        }catch{
+            throw NetworkError.malformedURL
+        }
         
-        let url = URL(string: "\(server)/geocode/v1/json?q=\(locationDescriptionCleaned!)&language=en&key=\(apiKey)")!
-        let (data, urlResponse) = try await session.data(url: URLRequest(url: url))
-        return (data, urlResponse)
     }
     
 }

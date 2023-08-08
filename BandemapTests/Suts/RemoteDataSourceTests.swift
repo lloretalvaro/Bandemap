@@ -75,22 +75,22 @@ final class RemoteDataSourceTests: XCTestCase {
         XCTAssertEqual(geocodingInfo.totalResults, 0)
     }
     
-//    func testRemoteDataSource_whenGetGeocodingInfoIsNil_expectNil() async throws{
-//        // Le metemos el request handler con status code y la data que queramos
-//        URLProtocolMock.requestHandler = { request in
-//            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!
-//            let geocodingInfo: GeocodingInfo? = nil
-//            
-//            let data = try JSONEncoder().encode(geocodingInfo)
-//            
-//            return (response, data)
-//        }
-//        
-//        // WHEN
-//        let geocodingInfo = try? await sut?.getGeocodingInfo(locationDescription: "madrid,spain")
-//        
-//        // THEN
-//        XCTAssertNil(geocodingInfo)
-//    }
+    func testRemoteDataSource_whenGetGeocodingInfoIsNil_expectNil() async throws{
+        // Le metemos el request handler con status code y la data que queramos
+        URLProtocolMock.requestHandler = { request in
+            let response = HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: nil, headerFields: nil)!
+            let geocodingInfo: GeocodingInfo? = nil
+
+            let data = try JSONEncoder().encode(geocodingInfo)
+
+            return (response, data)
+        }
+
+        // WHEN
+        let geocodingInfo = try? await sut?.getGeocodingInfo(locationDescription: "madrid,spain")
+
+        // THEN
+        XCTAssertNil(geocodingInfo)
+    }
     
 }

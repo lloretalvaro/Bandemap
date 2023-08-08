@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C21451952A82540800E859C6 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21451942A82540800E859C6 /* URLProtocolMock.swift */; };
+		C21451972A8299AE00E859C6 /* RemoteDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21451962A8299AE00E859C6 /* RemoteDataSourceMock.swift */; };
+		C214519B2A829D6800E859C6 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214519A2A829D6800E859C6 /* RepositoryTests.swift */; };
 		C21A9F7A2A81423C00D895D6 /* DetailsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A9F792A81423C00D895D6 /* DetailsCellView.swift */; };
 		C21ED4742A7967B600152EF0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4732A7967B600152EF0 /* RootView.swift */; };
 		C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4752A7967D100152EF0 /* RootViewModel.swift */; };
@@ -33,7 +35,6 @@
 		C2E99AFF2A792F9A009E2DBE /* BandemapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */; };
 		C2E99B032A792F9A009E2DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B022A792F9A009E2DBE /* Assets.xcassets */; };
 		C2E99B062A792F9A009E2DBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B052A792F9A009E2DBE /* Preview Assets.xcassets */; };
-		C2E99B102A792F9B009E2DBE /* BandemapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99B0F2A792F9B009E2DBE /* BandemapTests.swift */; };
 		C2E99B1A2A792F9B009E2DBE /* BandemapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99B192A792F9B009E2DBE /* BandemapUITests.swift */; };
 		C2E99B1C2A792F9B009E2DBE /* BandemapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99B1B2A792F9B009E2DBE /* BandemapUITestsLaunchTests.swift */; };
 		C2F05EF12A82386700581734 /* RemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F05EF02A82386700581734 /* RemoteDataSourceTests.swift */; };
@@ -61,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		C21451942A82540800E859C6 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		C21451962A8299AE00E859C6 /* RemoteDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceMock.swift; sourceTree = "<group>"; };
+		C214519A2A829D6800E859C6 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		C21A9F792A81423C00D895D6 /* DetailsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCellView.swift; sourceTree = "<group>"; };
 		C21ED4732A7967B600152EF0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C21ED4752A7967D100152EF0 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
@@ -88,7 +91,6 @@
 		C2E99B022A792F9A009E2DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E99B052A792F9A009E2DBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2E99B0B2A792F9B009E2DBE /* BandemapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandemapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2E99B0F2A792F9B009E2DBE /* BandemapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandemapTests.swift; sourceTree = "<group>"; };
 		C2E99B152A792F9B009E2DBE /* BandemapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BandemapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E99B192A792F9B009E2DBE /* BandemapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandemapUITests.swift; sourceTree = "<group>"; };
 		C2E99B1B2A792F9B009E2DBE /* BandemapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandemapUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -328,7 +330,6 @@
 			children = (
 				C2F05EF22A8240CB00581734 /* TestUtils */,
 				C2F05EEF2A82384600581734 /* Suts */,
-				C2E99B0F2A792F9B009E2DBE /* BandemapTests.swift */,
 			);
 			path = BandemapTests;
 			sourceTree = "<group>";
@@ -346,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				C2F05EF02A82386700581734 /* RemoteDataSourceTests.swift */,
+				C214519A2A829D6800E859C6 /* RepositoryTests.swift */,
 			);
 			path = Suts;
 			sourceTree = "<group>";
@@ -355,6 +357,7 @@
 			children = (
 				C21451942A82540800E859C6 /* URLProtocolMock.swift */,
 				C2F05EF82A82511700581734 /* NetworkFetchingMock.swift */,
+				C21451962A8299AE00E859C6 /* RemoteDataSourceMock.swift */,
 			);
 			path = TestUtils;
 			sourceTree = "<group>";
@@ -530,8 +533,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F05EF12A82386700581734 /* RemoteDataSourceTests.swift in Sources */,
-				C2E99B102A792F9B009E2DBE /* BandemapTests.swift in Sources */,
 				C2F05EF92A82511700581734 /* NetworkFetchingMock.swift in Sources */,
+				C21451972A8299AE00E859C6 /* RemoteDataSourceMock.swift in Sources */,
+				C214519B2A829D6800E859C6 /* RepositoryTests.swift in Sources */,
 				C21451952A82540800E859C6 /* URLProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@testable import Bandemap
 
 final class URLProtocolMock: URLProtocol {
     
