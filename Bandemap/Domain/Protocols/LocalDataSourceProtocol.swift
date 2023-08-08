@@ -8,7 +8,5 @@
 import Foundation
 
 protocol LocalDataSourceProtocol {
-   
     func getCountries() async throws -> [Country]?
-
 }

@@ -31,13 +31,12 @@ struct ListView: View {
 
                 }
             }
-            .scrollContentBackground(.hidden) // Esconder el background
+            .scrollContentBackground(.hidden) // Ocultar el fondo
             .background(
                 LinearGradient(gradient: Gradient(colors: [.indigo, .green]), startPoint: .bottomLeading, endPoint: .topTrailing)
             )
             .navigationTitle("Pick 1 to geolocate 📍")
             
-            //            .navigationBarTitleDisplayMode(.inline)
         }
         .toolbarBackground(.visible, for: .tabBar)
         

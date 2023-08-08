@@ -40,7 +40,7 @@ final class LocalDataSourceImpl: LocalDataSourceProtocol {
         Country(country: "Norway", capital: "Oslo", flag: "🇳🇴", coordinates: Coordinates(latitude: 59.9133301, longitude: 10.7389701)),
         Country(country: "Poland", capital: "Warsaw", flag: "🇵🇱", coordinates: Coordinates(latitude: 52.2337172, longitude: 21.0714322)),
         Country(country: "Portugal", capital: "Lisbon", flag: "🇵🇹", coordinates: Coordinates(latitude: 38.7077507, longitude: -9.1365919)),
-    Country(country: "Spain", capital: "Madrid", flag: "🇪🇸", coordinates: Coordinates(latitude: 40.4167047, longitude: -3.7035825)),
+        Country(country: "Spain", capital: "Madrid", flag: "🇪🇸", coordinates: Coordinates(latitude: 40.4167047, longitude: -3.7035825)),
         Country(country: "Romania", capital: "Bucharest", flag: "🇷🇴", coordinates: Coordinates(latitude: 44.4361414, longitude: 26.1027202)),
         Country(country: "San Marino", capital: "San Marino", flag: "🇸🇲", coordinates: Coordinates(latitude: 43.9458623, longitude: 12.458306)),
         Country(country: "Serbia", capital: "Belgrade", flag: "🇷🇸", coordinates: Coordinates(latitude: 44.8178131, longitude: 20.4568974)),

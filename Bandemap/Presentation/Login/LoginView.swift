@@ -46,7 +46,6 @@ struct LoginView: View {
             } label: {
                 Text("Login")
                     .modifier(ButtonTextModifier())
-                    
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

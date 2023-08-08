@@ -25,7 +25,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     private let session: URLSession = URLSession.shared
     
     func login(withUser user: String, andPassword password: String) {
-        print("login inside RemoteDataSourceImpl: user \(user), password \(password)")
+        print("LOG: login inside RemoteDataSourceImpl: user \(user), password \(password)")
     }
     
     
@@ -42,7 +42,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     func requestGeocodingInfo(locationDescription: String) async throws -> (Data, URLResponse) {
         //TODO: Make sure to test error cases
        
-        var locationDescriptionCleaned = locationDescription.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let locationDescriptionCleaned = locationDescription.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         print("---------")
         print(locationDescription)
         print(locationDescriptionCleaned!)

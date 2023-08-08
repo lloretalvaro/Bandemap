@@ -30,13 +30,11 @@ struct MapView: View {
                 MapAnnotation(
                     coordinate: CLLocationCoordinate2D(latitude: location.coordinates.latitude, longitude: location.coordinates.longitude)){
                         
-                        
                         NavigationLink {
                             DetailsView(country: location, detailsViewModel: DetailsViewModel(country: location, repository: rootViewModel.repository))
                         } label: {
                             Text(location.flag).font(.largeTitle)
                         }
-                        
                         
                     }
             }
@@ -46,8 +44,8 @@ struct MapView: View {
     }
 }
 
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView(mapViewModel: MapViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl(), localDataSource: LocalDataSourceImpl())))
-    }
-}
+//struct MapView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MapView(mapViewModel: MapViewModel(repository: RepositoryImpl(remoteDataSource: RemoteDataSourceImpl(), localDataSource: LocalDataSourceImpl())))
+//    }
+//}

@@ -22,13 +22,12 @@ final class RootViewModel: ObservableObject {
     @Published var status = Status.none
    
     
-    
     init(repository: RepositoryProtocol) {
         self.repository = repository
     }
     
     func onLogin(user: String, password: String) {
-    // Set status to loading
+        // Set status to loading
         self.status = .loading
         
         /* Estoy usando este delay de 0.5s simplemente para

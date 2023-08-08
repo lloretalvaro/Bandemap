@@ -44,7 +44,6 @@ struct DetailsView: View {
             .cornerRadius(16)
             
             DetailsCellView(detailsTitle: "📍 Located in", displayedText: "(\(detailsViewModel.geocodingInfo?.results?[0].geometry?.lat ?? 0.0), \(detailsViewModel.geocodingInfo?.results?[0].geometry?.lng ?? 0.0))",
-                            
                             failCondition: detailsViewModel.geocodingInfo?.results?[0].geometry?.lat == nil || detailsViewModel.geocodingInfo?.results?[0].geometry?.lng == nil)
             
             DetailsCellView(detailsTitle: "💰 Currency the", displayedText: "\(detailsViewModel.geocodingInfo?.results?[0].annotations?.currency?.name ?? "Error requesting currency name") with symbol \(detailsViewModel.geocodingInfo?.results?[0].annotations?.currency?.symbol ?? "Error requesting currency symbol")",
