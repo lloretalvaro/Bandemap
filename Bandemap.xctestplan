@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "DE023769-D6C2-426C-B12E-F67171880473",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Bandemap.xcodeproj",
+      "identifier" : "C2E99AFA2A792F9A009E2DBE",
+      "name" : "Bandemap"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Bandemap.xcodeproj",
+        "identifier" : "C2E99B0A2A792F9B009E2DBE",
+        "name" : "BandemapTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Bandemap.xcodeproj",
+        "identifier" : "C2E99B142A792F9B009E2DBE",
+        "name" : "BandemapUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

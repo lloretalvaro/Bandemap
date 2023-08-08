@@ -22,7 +22,13 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     
     let apiKey: String = "2d296f45cb294e1aa1a6a873e2961df7"
     
-    private let session: URLSession = URLSession.shared
+    private let session: NetworkFetchingProtocol
+    private let server: String = "https://api.opencagedata.com"
+    
+    init(session: NetworkFetchingProtocol = URLSession.shared) {
+        self.session = session
+    }
+    
     
     func login(withUser user: String, andPassword password: String) {
         print("LOG: login inside RemoteDataSourceImpl: user \(user), password \(password)")
@@ -41,7 +47,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     
     func requestGeocodingInfo(locationDescription: String) async throws -> (Data, URLResponse) {
         //TODO: Make sure to test error cases
-       
+    
         let locationDescriptionCleaned = locationDescription.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         print("---------")
         print(locationDescription)
@@ -49,8 +55,8 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
         print("---------")
         
         
-        let url = URL(string: "https://api.opencagedata.com/geocode/v1/json?q=\(locationDescriptionCleaned!)&language=en&key=\(apiKey)")!
-        let (data, urlResponse) = try await URLSession.shared.data(from: url)
+        let url = URL(string: "\(server)/geocode/v1/json?q=\(locationDescriptionCleaned!)&language=en&key=\(apiKey)")!
+        let (data, urlResponse) = try await session.data(url: URLRequest(url: url))
         return (data, urlResponse)
     }
     
