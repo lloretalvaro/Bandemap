@@ -32,7 +32,7 @@ final class DistanceViewModel: ObservableObject {
         }
     }
     
-    func calculateDistance(capital1: String, capital2: String) -> Double {
+    func calculateDistance(capital1: String, capital2: String) -> Int {
         let country1 = self.countries.filter{$0.capital == capital1}[0]
         let country2 = self.countries.filter{$0.capital == capital2}[0]
         
@@ -43,6 +43,7 @@ final class DistanceViewModel: ObservableObject {
         let locationA = CLLocation(latitude: coordinatesA.latitude, longitude: coordinatesA.longitude)
         let locationB = CLLocation(latitude: coordinatesB.latitude, longitude: coordinatesB.longitude)
             
-        return locationA.distance(from: locationB)
+        let distance = locationA.distance(from: locationB) / 1000
+        return Int(distance)
     }
 }

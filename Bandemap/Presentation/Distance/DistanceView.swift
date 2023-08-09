@@ -38,6 +38,9 @@ struct DistanceView: View {
                     Text("Capital 1")
                         .bold()
                     Picker("", selection: $selectedCapital1) {
+                        if selectedCapital1 == "" {
+                                Text("Pick...").tag("Placeholder")
+                        }
                         ForEach(distanceViewModel.capitals, id: \.self) {
                             Text($0)
                         }
@@ -52,6 +55,9 @@ struct DistanceView: View {
                     Text("Capital 2")
                         .bold()
                     Picker("", selection: $selectedCapital2) {
+                        if selectedCapital2 == "" {
+                                Text("Pick...").tag("Placeholder")
+                        }
                         ForEach(distanceViewModel.capitals, id: \.self) {
                             Text($0)
                         }
@@ -67,7 +73,10 @@ struct DistanceView: View {
             
             
             if selectedCapital1 != "" &&  selectedCapital2 != ""  && selectedCapital1 != selectedCapital2 {
-                Text("The distance between the capitals is \(distanceViewModel.calculateDistance(capital1: selectedCapital1, capital2: selectedCapital2))")
+                Text("The distance between the capitals is \(distanceViewModel.calculateDistance(capital1: selectedCapital1, capital2: selectedCapital2)) kilometers.")
+                    .padding(20)
+                    .font(.title3)
+                    .multilineTextAlignment(.center)
             }
             
             
