@@ -16,7 +16,8 @@ final class RepositoryTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         let remoteDataSource = RemoteDataSourceMock()
-        sut = RepositoryImpl(remoteDataSource: remoteDataSource, localDataSource: LocalDataSourceImpl())
+        let localDataSource = LocalDataSourceMock()
+        sut = RepositoryImpl(remoteDataSource: remoteDataSource, localDataSource: localDataSource)
     }
 
     override func tearDownWithError() throws {
@@ -39,7 +40,7 @@ final class RepositoryTests: XCTestCase {
     func testRepository_whenGetGeocodingInfoWithMockRemoteGetGeocodingInfoSuccessful_expectGeocodingInfo() async throws {
         do{
             let mockRemoteDataSource = RemoteDataSourceMock(geocodingInfoSuccess: true)
-            sut = RepositoryImpl(remoteDataSource: mockRemoteDataSource, localDataSource: LocalDataSourceImpl())
+            sut = RepositoryImpl(remoteDataSource: mockRemoteDataSource, localDataSource: LocalDataSourceMock())
             
             let geocodingInfo = try await sut?.getGeocodingInfo(locationDescription: "")
             XCTAssertNotNil(geocodingInfo)
@@ -48,5 +49,25 @@ final class RepositoryTests: XCTestCase {
         }
     }
     
-
+    func testRepository_whenGetCountriesWithMockLocalGetCountriesFail_expectNil() async throws {
+        do{
+            let countries = try await sut?.getCountries()
+            XCTAssertNil(countries)
+        }catch {
+            XCTFail("No error should be thrown in this successful case")
+        }
+    }
+    
+    func testRepository_whenGetCountriesWithMockLocalGetCountriesSuccessful_expectCountries() async throws {
+        do{
+            let mockLocalDataSource = LocalDataSourceMock(countriesSuccess: true)
+            sut = RepositoryImpl(remoteDataSource: RemoteDataSourceMock(), localDataSource: mockLocalDataSource)
+            
+            let countries = try await sut?.getCountries()
+            XCTAssertNotNil(countries)
+        }catch {
+            XCTFail("No error should be thrown in this successful case")
+        }
+    }
+    
 }

@@ -11,7 +11,7 @@ final class RepositoryImpl: RepositoryProtocol {
     
     private let remoteDataSource: RemoteDataSourceProtocol
     private let localDataSource: LocalDataSourceProtocol
-
+    
     init(remoteDataSource: RemoteDataSourceProtocol, localDataSource: LocalDataSourceProtocol) {
         self.remoteDataSource = remoteDataSource
         self.localDataSource = localDataSource
@@ -33,7 +33,11 @@ final class RepositoryImpl: RepositoryProtocol {
     }
     
     func getCountries() async throws -> [Country]? {
-        return try? await localDataSource.getCountries()
+        do {
+            return try await localDataSource.getCountries()
+        }catch{
+            throw error
+        }
     }
     
     

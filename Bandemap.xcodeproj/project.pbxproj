@@ -14,6 +14,7 @@
 		C21ED4742A7967B600152EF0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4732A7967B600152EF0 /* RootView.swift */; };
 		C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4752A7967D100152EF0 /* RootViewModel.swift */; };
 		C21ED4782A7967E400152EF0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4772A7967E400152EF0 /* LoginView.swift */; };
+		C22AD7712A8389BC00C5B775 /* LocalDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AD7702A8389BC00C5B775 /* LocalDataSourceMock.swift */; };
 		C2861FB82A7A3F4D00D390C5 /* CustomTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FB72A7A3F4D00D390C5 /* CustomTextFieldModifier.swift */; };
 		C2861FBB2A7A400000D390C5 /* ButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FBA2A7A400000D390C5 /* ButtonTextModifier.swift */; };
 		C2861FC02A7A506400D390C5 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FBF2A7A506400D390C5 /* RepositoryProtocol.swift */; };
@@ -68,6 +69,7 @@
 		C21ED4732A7967B600152EF0 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C21ED4752A7967D100152EF0 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		C21ED4772A7967E400152EF0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C22AD7702A8389BC00C5B775 /* LocalDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceMock.swift; sourceTree = "<group>"; };
 		C2861FB72A7A3F4D00D390C5 /* CustomTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldModifier.swift; sourceTree = "<group>"; };
 		C2861FBA2A7A400000D390C5 /* ButtonTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextModifier.swift; sourceTree = "<group>"; };
 		C2861FBF2A7A506400D390C5 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				C21451942A82540800E859C6 /* URLProtocolMock.swift */,
 				C2F05EF82A82511700581734 /* NetworkFetchingMock.swift */,
 				C21451962A8299AE00E859C6 /* RemoteDataSourceMock.swift */,
+				C22AD7702A8389BC00C5B775 /* LocalDataSourceMock.swift */,
 			);
 			path = TestUtils;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			files = (
 				C2F05EF12A82386700581734 /* RemoteDataSourceTests.swift in Sources */,
 				C2F05EF92A82511700581734 /* NetworkFetchingMock.swift in Sources */,
+				C22AD7712A8389BC00C5B775 /* LocalDataSourceMock.swift in Sources */,
 				C21451972A8299AE00E859C6 /* RemoteDataSourceMock.swift in Sources */,
 				C214519B2A829D6800E859C6 /* RepositoryTests.swift in Sources */,
 				C21451952A82540800E859C6 /* URLProtocolMock.swift in Sources */,
