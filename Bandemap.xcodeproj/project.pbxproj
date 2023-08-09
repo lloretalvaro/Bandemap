@@ -15,6 +15,8 @@
 		C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4752A7967D100152EF0 /* RootViewModel.swift */; };
 		C21ED4782A7967E400152EF0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ED4772A7967E400152EF0 /* LoginView.swift */; };
 		C22AD7712A8389BC00C5B775 /* LocalDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AD7702A8389BC00C5B775 /* LocalDataSourceMock.swift */; };
+		C22AD7742A83A85200C5B775 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AD7732A83A85200C5B775 /* DistanceView.swift */; };
+		C22AD7762A83A9F200C5B775 /* DistanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AD7752A83A9F200C5B775 /* DistanceViewModel.swift */; };
 		C2861FB82A7A3F4D00D390C5 /* CustomTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FB72A7A3F4D00D390C5 /* CustomTextFieldModifier.swift */; };
 		C2861FBB2A7A400000D390C5 /* ButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FBA2A7A400000D390C5 /* ButtonTextModifier.swift */; };
 		C2861FC02A7A506400D390C5 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FBF2A7A506400D390C5 /* RepositoryProtocol.swift */; };
@@ -70,6 +72,8 @@
 		C21ED4752A7967D100152EF0 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		C21ED4772A7967E400152EF0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C22AD7702A8389BC00C5B775 /* LocalDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceMock.swift; sourceTree = "<group>"; };
+		C22AD7732A83A85200C5B775 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
+		C22AD7752A83A9F200C5B775 /* DistanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewModel.swift; sourceTree = "<group>"; };
 		C2861FB72A7A3F4D00D390C5 /* CustomTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldModifier.swift; sourceTree = "<group>"; };
 		C2861FBA2A7A400000D390C5 /* ButtonTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextModifier.swift; sourceTree = "<group>"; };
 		C2861FBF2A7A506400D390C5 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 		C21ED46D2A79676400152EF0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C22AD7722A83A84200C5B775 /* Distance */,
 				C29A08A42A7CFF6E007E2646 /* Details */,
 				C29A08922A7BF871007E2646 /* List */,
 				C2861FCA2A7A574600D390C5 /* Map */,
@@ -181,6 +186,15 @@
 				C21ED4772A7967E400152EF0 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		C22AD7722A83A84200C5B775 /* Distance */ = {
+			isa = PBXGroup;
+			children = (
+				C22AD7732A83A85200C5B775 /* DistanceView.swift */,
+				C22AD7752A83A9F200C5B775 /* DistanceViewModel.swift */,
+			);
+			path = Distance;
 			sourceTree = "<group>";
 		};
 		C2861FB62A7A3EE700D390C5 /* Modifiers */ = {
@@ -518,6 +532,7 @@
 				C2F05EF42A8247E700581734 /* NetworkFetchingProtocol.swift in Sources */,
 				C21ED4762A7967D100152EF0 /* RootViewModel.swift in Sources */,
 				C28BF6382A810AE5006A3CC0 /* MapViewModel.swift in Sources */,
+				C22AD7742A83A85200C5B775 /* DistanceView.swift in Sources */,
 				C2F05EF72A82485200581734 /* URLSessionExtension.swift in Sources */,
 				C21ED4782A7967E400152EF0 /* LoginView.swift in Sources */,
 				C29A08982A7C04DB007E2646 /* ListCellView.swift in Sources */,
@@ -526,6 +541,7 @@
 				C2861FC02A7A506400D390C5 /* RepositoryProtocol.swift in Sources */,
 				C2861FC72A7A518D00D390C5 /* RemoteDataSourceImpl.swift in Sources */,
 				C29A089C2A7C07E0007E2646 /* Country.swift in Sources */,
+				C22AD7762A83A9F200C5B775 /* DistanceViewModel.swift in Sources */,
 				C29A08A32A7C0D53007E2646 /* LocalDataSourceProtocol.swift in Sources */,
 				C2861FC92A7A52AB00D390C5 /* RepositoryImpl.swift in Sources */,
 			);

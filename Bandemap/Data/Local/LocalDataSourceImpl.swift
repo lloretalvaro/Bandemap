@@ -75,8 +75,6 @@ final class LocalDataSourceImpl: LocalDataSourceProtocol {
 //        }
 
         return countries
-        
-        //return [Country(country: "Italy", capital: "Rome", flag: "🇮🇹")]
     }
     
     

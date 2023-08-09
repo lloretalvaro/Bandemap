@@ -12,15 +12,15 @@ struct RootView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
-      
+        
         switch (rootViewModel.status) {
             
         case Status.none:
             LoginView()
-        
+            
         case Status.loading:
             ProgressView()
-        
+            
         case Status.error(error: let errorString):
             Text("Error \(errorString)")
             
@@ -36,6 +36,11 @@ struct RootView: View {
                     .tabItem{
                         Image(systemName: "list.dash")
                         Text("Listado")
+                    }
+                DistanceView(distanceViewModel: DistanceViewModel(repository: rootViewModel.repository))
+                    .tabItem{
+                        Image(systemName: "plus.slash.minus")
+                        Text("Distancia")
                     }
             }
             
