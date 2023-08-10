@@ -31,7 +31,7 @@ struct DistanceView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 225)
-                .accessibilityLabel("An icon of the planet Earth")
+                .accessibilityLabel("Two map points icons connected by a line")
                 
             HStack {
                 VStack{
