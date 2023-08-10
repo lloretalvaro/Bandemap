@@ -73,7 +73,7 @@ struct DistanceView: View {
             
             
             if selectedCapital1 != "" &&  selectedCapital2 != ""  && selectedCapital1 != selectedCapital2 {
-                Text("The distance between the capitals is \(distanceViewModel.calculateDistance(capital1: selectedCapital1, capital2: selectedCapital2)) kilometers.")
+                Text("The distance between the capitals is \(try! distanceViewModel.calculateDistance(capital1: selectedCapital1, capital2: selectedCapital2)) kilometers.")
                     .padding(20)
                     .font(.title3)
                     .multilineTextAlignment(.center)

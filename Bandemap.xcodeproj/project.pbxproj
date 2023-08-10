@@ -17,6 +17,8 @@
 		C22AD7712A8389BC00C5B775 /* LocalDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AD7702A8389BC00C5B775 /* LocalDataSourceMock.swift */; };
 		C22AD7742A83A85200C5B775 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AD7732A83A85200C5B775 /* DistanceView.swift */; };
 		C22AD7762A83A9F200C5B775 /* DistanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AD7752A83A9F200C5B775 /* DistanceViewModel.swift */; };
+		C23A641E2A84F31C00265B43 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A641D2A84F31C00265B43 /* ListViewModelTests.swift */; };
+		C23A64202A84F4BA00265B43 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23A641F2A84F4BA00265B43 /* MapViewModelTests.swift */; };
 		C2861FB82A7A3F4D00D390C5 /* CustomTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FB72A7A3F4D00D390C5 /* CustomTextFieldModifier.swift */; };
 		C2861FBB2A7A400000D390C5 /* ButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FBA2A7A400000D390C5 /* ButtonTextModifier.swift */; };
 		C2861FC02A7A506400D390C5 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2861FBF2A7A506400D390C5 /* RepositoryProtocol.swift */; };
@@ -35,6 +37,7 @@
 		C29A08A32A7C0D53007E2646 /* LocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A22A7C0D53007E2646 /* LocalDataSourceProtocol.swift */; };
 		C29A08A72A7CFF98007E2646 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A62A7CFF98007E2646 /* DetailsView.swift */; };
 		C29A08A92A7D0D38007E2646 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29A08A82A7D0D38007E2646 /* DetailsViewModel.swift */; };
+		C2A997362A83F52100413664 /* DistanceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A997352A83F52100413664 /* DistanceViewModelTests.swift */; };
 		C2E99AFF2A792F9A009E2DBE /* BandemapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */; };
 		C2E99B032A792F9A009E2DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B022A792F9A009E2DBE /* Assets.xcassets */; };
 		C2E99B062A792F9A009E2DBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E99B052A792F9A009E2DBE /* Preview Assets.xcassets */; };
@@ -74,6 +77,8 @@
 		C22AD7702A8389BC00C5B775 /* LocalDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceMock.swift; sourceTree = "<group>"; };
 		C22AD7732A83A85200C5B775 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		C22AD7752A83A9F200C5B775 /* DistanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewModel.swift; sourceTree = "<group>"; };
+		C23A641D2A84F31C00265B43 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
+		C23A641F2A84F4BA00265B43 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		C2861FB72A7A3F4D00D390C5 /* CustomTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldModifier.swift; sourceTree = "<group>"; };
 		C2861FBA2A7A400000D390C5 /* ButtonTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextModifier.swift; sourceTree = "<group>"; };
 		C2861FBF2A7A506400D390C5 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 		C29A08A22A7C0D53007E2646 /* LocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceProtocol.swift; sourceTree = "<group>"; };
 		C29A08A62A7CFF98007E2646 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		C29A08A82A7D0D38007E2646 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		C2A997352A83F52100413664 /* DistanceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewModelTests.swift; sourceTree = "<group>"; };
 		C2E99AFB2A792F9A009E2DBE /* Bandemap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandemap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E99AFE2A792F9A009E2DBE /* BandemapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandemapApp.swift; sourceTree = "<group>"; };
 		C2E99B022A792F9A009E2DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -364,6 +370,9 @@
 			children = (
 				C2F05EF02A82386700581734 /* RemoteDataSourceTests.swift */,
 				C214519A2A829D6800E859C6 /* RepositoryTests.swift */,
+				C2A997352A83F52100413664 /* DistanceViewModelTests.swift */,
+				C23A641D2A84F31C00265B43 /* ListViewModelTests.swift */,
+				C23A641F2A84F4BA00265B43 /* MapViewModelTests.swift */,
 			);
 			path = Suts;
 			sourceTree = "<group>";
@@ -555,7 +564,10 @@
 				C2F05EF92A82511700581734 /* NetworkFetchingMock.swift in Sources */,
 				C22AD7712A8389BC00C5B775 /* LocalDataSourceMock.swift in Sources */,
 				C21451972A8299AE00E859C6 /* RemoteDataSourceMock.swift in Sources */,
+				C23A64202A84F4BA00265B43 /* MapViewModelTests.swift in Sources */,
 				C214519B2A829D6800E859C6 /* RepositoryTests.swift in Sources */,
+				C2A997362A83F52100413664 /* DistanceViewModelTests.swift in Sources */,
+				C23A641E2A84F31C00265B43 /* ListViewModelTests.swift in Sources */,
 				C21451952A82540800E859C6 /* URLProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

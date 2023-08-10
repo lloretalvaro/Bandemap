@@ -13,15 +13,22 @@ final class MapViewModel: ObservableObject {
     
     init(repository: RepositoryProtocol) {
         self.repository = repository
+        initCountries()
+    }
+    
+    func initCountries(closure: @escaping ()->() = {}){
         DispatchQueue.main.async {
             Task {
-                guard let countriesList = try? await repository.getCountries() else {
+                guard let countriesList = try? await self.repository.getCountries() else {
                     self.countries = []
                     print("Unable to get countries")
+                    closure()
                     return
                 }
                 self.countries = countriesList
+                closure()
             }
         }
     }
+    
 }
